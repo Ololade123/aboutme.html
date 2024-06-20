@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        /* Basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .intro {
+            margin-bottom: 20px;
+        }
+
+        .details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .details ul li {
+            margin-bottom: 10px;
+        }
+
+        .interests ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            clear: both;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Hi, I'm Ololade Ogundijo</h2>
+            <p>I am passionate about Cloud Engineering and Artificial intelligence. This is a brief introduction about myself.</p>
+        </section>
+        <section class="details">
+            <h3>Details</h3>
+            <ul>
+                <li><strong>Name:</strong> Ololade Ogundijo</li>
+                <li><strong>Age:</strong> 28 years</li>
+                <li><strong>Location:</strong> Lagos,Nigeria</li>
+                <li><strong>Occupation:</strong> Data annotator</li>
+            </ul>
+        </section>
+        <section class="interests">
+            <h3>Interests</h3>
+            <p>I enjoy:</p>
+            <ul>
+                <li>Watching Football</li>
+                <li>Watching movies</li>
+                <li>Listening to music</li>
+                <!-- Add more interests as needed -->
+            </ul>
+        </section>
+        <section class="message">
+            <h3>Send Me a Message</h3>
+            <form id="messageForm">
+                <label for="message">Your Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+            <p id="response"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Ololade Ogundijo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript code
+        document.getElementById("messageForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            var message = document.getElementById("message").value;
+            document.getElementById("response").textContent = "Message sent: " + message;
+            document.getElementById("message").value = ""; // Clear the input field
+        });
+    </script>
+</body>
+</html>
+
